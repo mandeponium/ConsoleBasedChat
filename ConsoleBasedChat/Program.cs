@@ -41,7 +41,7 @@ namespace ConsoleBasedChat
 
             SqlConnection conn = new SqlConnection(connectionString);
             
-            string stmt = "INSERT INTO dbo.message(message, messagetime) VALUES(@message, @sqlFormattedDate)";
+            string stmt = "INSERT INTO dbo.TextMessage(MessageBody, MessageTime) VALUES(@message, @sqlFormattedDate)";
             SqlCommand cmd1 = new SqlCommand(stmt, conn);
 
             insertTime = DateTime.Now;
